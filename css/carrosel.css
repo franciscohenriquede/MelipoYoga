@@ -1,0 +1,65 @@
+
+.carrossel {
+    top: 40px;
+    position: relative;
+    margin: 50px auto;
+    overflow: hidden;
+    border: 1px solid #cc1414d5;
+    border-radius: 10px;
+    background: rgb(206, 125, 26);
+    width: 380px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: 690px;
+}
+
+.carrossel-inner {
+    display: flex;
+    transition: transform 1.0s ease-in-out;
+    width: 300%; /* Ajusta conforme o número de slides */
+}
+
+.slide {
+    flex: 1;
+    min-width: 10%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 400px;
+    font-size: 30px;
+    word-break: break-word; 
+
+    
+}
+.textoTres{
+    left: 40px;
+    position: relative;
+}
+.textoDois{
+    left: 20px;
+    position: relative;
+}
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button:hover {
+    background: black;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

@@ -1,0 +1,21 @@
+
+.Mandala img{
+    max-width: 100%; /* Garante que a imagem se ajuste ao tamanho da tela */
+    height: auto; 
+    background-size: contain; 
+    }
+
+
+
+    @media (max-width: 500px) {
+      
+      
+        .Mandala img{/* Garante que a imagem se ajuste ao tamanho da tela */
+            background-size: contain; 
+            position: relative;
+            top: 390px;
+            right: 180px;
+            max-width: 300%;
+       
+    }
+    }
