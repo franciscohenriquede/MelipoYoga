@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/carrosel.css">
 
   <script src="js/Carrosel.js"></script>
-  <script src="js/Meditacao.js"></script>
+  <script src="js/MeditacaoAbelha.js"></script>
 
 </head>
 
@@ -34,7 +34,8 @@
 
       <p class="textoprincipal" id="textoprincipal">
         Olá! Além de te ensinar o que é yoga,
-        gostaríamos de oferecer um momento de meditação
+        gostaríamos de oferecer  Bhramari Pranayama  (a Meditação da Abelha)
+        🐝🧘‍♂️
         clique em começar ,
         que daremos as instruções!
 
@@ -45,7 +46,7 @@
 
       <div class="box-3">
         <a class="btn btn-three" onclick="alterarTitulo()">
-          MEDITAR
+          COMEÇAR
         </a>ov
       </div>
     </div>
@@ -57,21 +58,26 @@
       <div class="carrossel-inner">
         <div class="slide">
 
-          <p> O melipona é Nossa homenagem as abelhas 
-            a busca por uma compreensão mais profunda da verdadeira essência do eu ou da natureza búdica. simbolizada pelo Nectar.   </p>
+          <p> Melipona é a nossa homenagem às abelhas.
+            Ela representa a busca por uma compreensão mais profunda da verdadeira essência do eu ou da natureza 
+            búdica, simbolizada pelo néctar.   </p>
         </div>
         <div class="slide">
 
-          <p class="textoDois"> Melipona È nome de uma
-            especie de abelha em que não existe ferrão . Sua importância para o ecossistema  é icomensuráveis , portanto melipona também é o nosso convite perecemos 
-            a intercontividade de todas as coisas</p>
+          <p class="textoDois"> O termo   Melipona  diz respeito diversas espécies de abelhas nativas da América Latina, conhecidas por 
+            não possuírem ferrão. Essas abelhas desempenham um papel essencial na polinização, garantindo a biodiversidade e
+             a regeneração de florestas tropicais.
+          </p>
         </div>
         <div class="slide">
 
-          <p class="textoTres">S Portanto não são preceitos morais a serem seguidos para se
-            aceito por alguns deus ou divindade. São qualidade naturais que vão se relacionando entre si , e que feita
-            de forma
-            isolado não possui grande valor no objetivo principal do yoga.
+          <p class="textoTres"> Não se trata de preceitos morais a serem seguidos para se obter aceitação de um deus ou divindade. MAs sim de 
+             qualidades naturais que são cultivadas  para que  possamos se relacionar com a vida ,  
+            e com toda sua polaridade desde um lugar Compassivo e lucido. oferecemos aulas de yoga online e presenciais, retiros
+            e vivências para quem deseja se aprofundar nessa prática milenar.	
+          </p>  
+          <div id="contador"></div>
+            
             <img class="foto" src="./imagens/melipona yoga(2).png" alt="lobo" width="100px" height="100px">
           </p>
         </div>
@@ -118,41 +124,7 @@
 
 </body>
 <script>
-  let textos = [
-    "Faremos a respiração da Abelha , Pranayama Bhramari em Sanscrito ",
-    "seus dedos indicadores nos seus ouvidos.",
-    "Tome uma inspiração profunda e quando você expirar, gentilmente pressione a cartilagem..",
-    "inspire novamente e continue o mesmo processo por 6 ou 7 vezes , agora com os olhos fechados"
-  ];
-  let index = -1;
-  let interval;
-
-  function alterarTitulo() {
-    const botao = document.querySelector('a[onclick="alterarTitulo()"]');
-
-    // Verifica se o elemento e o botão existem
-
-    if (botao) {
-      botao.innerHTML = ""; // Altera o texto do botão
-    }
-
-    // Começa a sequência de mudanças automáticas
-    if (!interval) {
-      interval = setInterval(() => {
-        index = (index + 1) % textos.length; // Alterna entre os textos do array
-        const textoprincipal = document.getElementById('textoprincipal');
-
-        // Oculta o texto gradualmente
-        textoprincipal.style.opacity = '0';
-
-        // Aguarda a transição de ocultar antes de alterar o texto
-        setTimeout(() => {
-          textoprincipal.innerHTML = textos[index]; // Usa innerHTML para suportar formatação
-          textoprincipal.style.opacity = '0.8'; // Mostra o texto novamente
-        }, 1000); // Tempo para a transição
-      }, 4000); // Intervalo de 4 segundos entre as mensagens
-    }
-  }
+  
 </script>
 </body>
 
