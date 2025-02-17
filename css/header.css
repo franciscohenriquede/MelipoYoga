@@ -10,7 +10,6 @@
     .header-menu{
     
         display: flex;
-        flex: wrap;
         gap: 10px;
         list-style-type: none;
         justify-content: center;
