@@ -11,13 +11,30 @@
   <link rel="stylesheet" href="css/button.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/carrosel.css">
-
-  <script src="js/Carrosel.js"></script>
-  <script src="js/MeditacaoAbelha.js"></script>
-
+  <link rel="stylesheet" href="css/meditacao.css">
+  <script src="carrossel.js" defer></script>
 </head>
 
 <body>
+<!-- ==================== OVERLAY DE MEDITAÇÃO ==================== -->
+<div id="meditacao-overlay" class="meditacao-overlay">
+  <div class="meditacao-content">
+    
+    <!-- Botão para fechar -->
+    <span class="close-overlay" id="closeOverlay">&times;</span>
+    
+    <h1>🧘‍♀️ Bem-vindo à Melipona Yoga</h1>
+    <p id="meditacao-instrucao">
+      Antes de começarmos, que tal experimentar <br>
+      <strong>Bhramari Pranayama (Meditação da Abelha) 🐝</strong>?
+    </p>
+    
+    <div class="breath-circle"></div>
+
+    <!-- Botão de início -->
+    <button class="btn btn-three" id="btnOverlay">COMEÇAR</button>
+  </div>
+</div>
   <header class="header">
     <img class="logo" src="./imagens/vecteezy_luxury-golden-ornamental-mandala-background-vector-design_10515822.svg"
       alt="logo" width="300px" height="300px">
@@ -28,102 +45,119 @@
     </ul>
   </header>
 
-  <main class="desenvolvimento">
 
-    <div class="imersao">
-
-      <p class="textoprincipal" id="textoprincipal">
-        Olá! antes de nos apresertamos,   
-        gostaríamos de convidar você a realizar  Bhramari Pranayama  (a Meditação da Abelha)
-        🐝🧘‍♂️
-        clique em começar ,
-        que daremos as instruções!
-
-      </p>
-      <img class="meditacao" src="./imagens/abelhas-mel-com-br-wiki-mel-scaled.jpg" alt="meditacao" width="1359px"
-        height="600px">
-
-
-      <div class="box-3">
-        <a class="btn btn-three" onclick="alterarTitulo()">
-          COMEÇAR
-        </a>ov
-      </div>
-    </div>
-  </main>
   <section class="introducao">
-   <div>
-    <h1>Melipona Yoga</h1>
+    <div>
+      <h1>Melipona Yoga</h1>
     <div class="carrossel">
-      <div class="carrossel-inner">
-        <div class="slide">
-
-          <p> Melipona é a nossa homenagem às abelhas.
-            Ela representa a busca por uma compreensão mais profunda da verdadeira essência do eu ou da natureza 
-            búdica, simbolizada pelo néctar.   </p>
-        </div>
-        <div class="slide">
-
-          <p class="textoDois"> O termo   Melipona  diz respeito diversas espécies de abelhas nativas da América Latina, conhecidas por 
-            não possuírem ferrão. Essas abelhas desempenham um papel essencial na polinização, garantindo a biodiversidade e
-             a regeneração de florestas tropicais.
-          </p>
-        </div>
-        <div class="slide">
-
-          <p class="textoTres">Pois atráves dos assanas , meditações e interações psicodinâmicas queremos promover o bem-estar do corpo, Mas não somente
-            um compreenção mais profunda do eu, e da natureza búdica, simbolizada pelo néctar
-          </p>  
-          <div id="contador"></div>
-            
-            <img class="foto" src="./imagens/melipona yoga(2).png" alt="lobo" width="100px" height="100px">
-          </p>
-        </div>
-
-      </div>
-      <button class="prev" onclick="prevSlide()">&#10094;</button>
-      <button class="next" onclick="nextSlide()">&#10095;</button>
+  <div class="carrossel-inner">
+    <div class="slide">
+      <p>Melipona é a nossa homenagem às abelhas. Ela representa a busca por uma compreensão mais profunda da verdadeira essência do eu ou da natureza búdica, simbolizada pelo néctar.</p>
+    </div>
+    <div class="slide">
+      <p>O termo Melipona diz respeito a diversas espécies de abelhas nativas da América Latina, conhecidas por não possuírem ferrão. Elas desempenham um papel essencial na polinização, garantindo a biodiversidade e a regeneração de florestas tropicais.</p>
+    </div>
+    <div class="slide">
+      <p>Pois através dos assanas, meditações e interações psicodinâmicas queremos promover o bem-estar do corpo, mas também uma compreensão mais profunda do eu e da natureza búdica, simbolizada pelo néctar.</p>
     </div>
   </div>
+  <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
+    </div>
     <div class="video-container">
       <video autoplay muted loop>
         <source src="imagens/melipona.mp4" type="video/mp4">
         <source src="imagens/melipona.mp4" type="video/ogg">
         Seu navegador não suporta o elemento de vídeo.
+      </video>
     </div>
     <div class="video-containerSegundo">
-
       <video autoplay muted loop>
         <source src="imagens/macauba.mp4" type="video/mp4">
         <source src="imagens/macauba.mp4" type="video/ogg">
         Seu navegador não suporta o elemento de vídeo.
       </video>
-      </video>
     </div>
-
-
-
   </section>
 
-
-
-
   <footer>
-    <a>-------></a>
+    <audio autoplay loop>
+      <source src="./música/music.mp3" type="audio/mpeg">
+    </audio>
   </footer>
 
-
-
-
-  <audio autoplay>
-    <source src="./música/music.mp3" type="audio/mpeg">
-
-  </audio>
-
-</body>
+  <!-- SCRIPT DE MEDITAÇÃO -->
 <script>
-  
+const etapas = [
+  { texto: "Inspire profundamente pelo nariz, contando até 4. 🌬️", duracao: 4000, escala: 1.3 },
+  { texto: "Segure o ar por 2 segundos, sentindo o corpo se equilibrar.", duracao: 2000, escala: 1.3 },
+  { texto: "Expire devagar, emitindo um som suave, como o zumbido de uma abelha. 🐝", duracao: 6000, escala: 1 }
+];
+
+let cicloAtual = 0;
+let etapaAtual = 0;
+let timeout;
+
+const btnOverlay = document.getElementById("btnOverlay");
+const instrucao = document.getElementById("meditacao-instrucao");
+const overlay = document.getElementById("meditacao-overlay");
+const closeOverlay = document.getElementById("closeOverlay");
+const breathCircle = document.querySelector(".breath-circle");
+
+btnOverlay.addEventListener("click", () => {
+  btnOverlay.style.display = "none";
+  cicloAtual = 0;
+  etapaAtual = 0;
+  mostrarEtapa();
+});
+
+function mostrarEtapa() {
+  const etapa = etapas[etapaAtual];
+  instrucao.textContent = etapa.texto;
+
+  // animação proporcional à duração
+  breathCircle.style.transition = `transform ${etapa.duracao}ms linear`;
+  breathCircle.style.transform = `scale(${etapa.escala})`;
+
+  timeout = setTimeout(() => {
+    etapaAtual++;
+    if (etapaAtual >= etapas.length) {
+      etapaAtual = 0;
+      cicloAtual++;
+
+      // frase especial após o primeiro ciclo
+      if (cicloAtual === 1) {
+        instrucao.textContent = "Vamos repetir por 5 vezes, tampando os ouvidos com as mãos. 👂🙌";
+        // espera 4 segundos antes de continuar
+        setTimeout(mostrarEtapa, 4000);
+        return;
+      }
+    }
+
+    if (cicloAtual >= 5) {
+      instrucao.textContent = "Meditação concluída. 🙏";
+      breathCircle.style.transform = "scale(1)";
+      return;
+    }
+
+    mostrarEtapa(); // chama próxima etapa
+  }, etapa.duracao);
+}
+
+closeOverlay.addEventListener("click", () => {
+  overlay.style.display = "none";
+  clearTimeout(timeout);
+  breathCircle.style.transform = "scale(1)";
+  cicloAtual = 0;
+  etapaAtual = 0;
+  instrucao.textContent = "Antes de começarmos, que tal experimentar \nBhramari Pranayama (Meditação da Abelha) 🐝";
+  btnOverlay.style.display = "block";
+});
+
+
 </script>
+
 </body>
 
 </html>

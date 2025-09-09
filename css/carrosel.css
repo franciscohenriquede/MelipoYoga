@@ -1,55 +1,57 @@
-
 .carrossel {
-    top: 40px;
     position: relative;
-    margin: 50px auto;
-    overflow: hidden;
+    margin: 20px auto;
+    overflow: hidden; /* mantém os slides dentro do container */
     border: 1px solid #cc1414d5;
     border-radius: 10px;
     background: rgb(206, 125, 26);
     width: 380px;
-    padding: 10px 10px 10px 10px;
+    height: 800px; /* altura fixa */
+    padding: 10px;
+    box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    height: 690px;
 }
 
 .carrossel-inner {
     display: flex;
-    transition: transform 1.0s ease-in-out;
-    width: 300%; /* Ajusta conforme o número de slides */
+    width: 300%; /* 3 slides */
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    flex: 1;
-    min-width: 10%;
+    flex: 0 0 100%; /* ocupa 100% da largura do carrossel */
+    display: flex;
+    flex-direction: column; /* garante que elementos internos fiquem em coluna */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
     text-align: center;
     font-family: Arial, sans-serif;
+    font-size: 18px;
     padding: 20px;
     box-sizing: border-box;
-    width: 400px;
-    font-size: 30px;
-    word-break: break-word; 
-
-    
+    height: 800px;
+    overflow-y: auto; /* scroll se o texto for maior que o slide */
 }
-.textoTres{
-    left: 40px;
-    position: relative;
-}
-.textoDois{
-    left: 20px;
-    position: relative;
+.slide p {
+    margin: 0;
+    width: 100%;            /* ocupa toda largura do slide */
+    max-width: 100%;        /* não ultrapassa o slide */
+    white-space: normal;    /* permite quebra de linha */
+    overflow-wrap: break-word; 
+    word-wrap: break-word;  
+    line-height: 1.5;
 }
 button {
     position: absolute;
     top: 50%;
-    transform: translateY(-10%);
+    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 2;
 }
 
 button:hover {
