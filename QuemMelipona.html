@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/carrosel.css">
   <link rel="stylesheet" href="css/meditacao.css">
-  <script src="carrossel.js" defer></script>
+  <script src="js/Carrosel.js" defer></script>
 </head>
 
 <body>
@@ -36,34 +36,49 @@
   </div>
 </div>
   <header class="header">
-    <img class="logo" src="./imagens/vecteezy_luxury-golden-ornamental-mandala-background-vector-design_10515822.svg"
-      alt="logo" width="300px" height="300px">
+   
+    <img class="logo" src="./imagens/img/MeliLogo.png" alt="logo" width="300" height="300">
     <ul class="header-menu">
-      <li><a href="#">Quem é Melipona Yoga?</a></li>
       <li><a href="./Agenda.html">Agende Aulas Online</a></li>
-      <li><a href="./OqueYoga.html">O que é o yoga?</a></li>
     </ul>
   </header>
 
 
   <section class="introducao">
-    <div>
-      <h1>Melipona Yoga</h1>
+   <div>
+    <h1>Melipona Yoga</h1>
     <div class="carrossel">
-  <div class="carrossel-inner">
-    <div class="slide">
-      <p>Melipona é a nossa homenagem às abelhas. Ela representa a busca por uma compreensão mais profunda da verdadeira essência do eu ou da natureza búdica, simbolizada pelo néctar.</p>
+      <div class="carrossel-inner">
+        <div class="slide">
+
+          <p> Melipona é a nossa homenagem às abelhas.
+            Ela representa a busca por uma compreensão mais profunda da verdadeira essência do eu ou da natureza 
+            búdica, simbolizada pelo néctar.   </p>
+        </div>
+        <div class="slide">
+
+          <p class="textoDois"> O termo   Melipona  diz respeito diversas espécies de abelhas nativas da América Latina, conhecidas por 
+            não possuírem ferrão. Essas abelhas desempenham um papel essencial na polinização, garantindo a biodiversidade e
+             a regeneração de florestas tropicais.
+          </p>
+        </div>
+        <div class="slide">
+
+          <p class="textoTres">Pois atráves dos assanas , meditações e interações psicodinâmicas queremos promover o bem-estar do corpo, Mas não somente
+            uma compreenção mais profunda do eu, e da natureza búdica, simbolizada pelo néctar.
+          </p>  
+          <div id="contador"></div>
+            
+            <img class="foto" src="./imagens/melipona yoga(2).png" alt="lobo" width="100px" height="100px">
+          </p>
+        </div>
+
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
-    <div class="slide">
-      <p>O termo Melipona diz respeito a diversas espécies de abelhas nativas da América Latina, conhecidas por não possuírem ferrão. Elas desempenham um papel essencial na polinização, garantindo a biodiversidade e a regeneração de florestas tropicais.</p>
-    </div>
-    <div class="slide">
-      <p>Pois através dos assanas, meditações e interações psicodinâmicas queremos promover o bem-estar do corpo, mas também uma compreensão mais profunda do eu e da natureza búdica, simbolizada pelo néctar.</p>
-    </div>
-  </div>
-  <button class="prev" onclick="prevSlide()">&#10094;</button>
-  <button class="next" onclick="nextSlide()">&#10095;</button>
-</div>
+
+ 
     </div>
     <div class="video-container">
       <video autoplay muted loop>

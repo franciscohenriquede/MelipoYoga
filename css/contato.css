@@ -1,16 +1,113 @@
-.Contato{
-color: rgb(26, 26, 22);
-font-size: 20px;
-position: relative;
-z-index: 1;
-top: -950px;
-left: 535px;
-
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: #fff8e1; /* tom suave de mel */
+    color: #4e342e;
 }
 
-.imgContato{
-position: relative;
-z-index: 1;
-left: 220px;
-top: -660px;
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ffe082, #ffd54f);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-bottom: 2px solid #f2c94c;
+}
+
+.header .logo {
+    width: 250px;
+    height: auto;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 10px 0 0 0;
+}
+
+.header-menu li a {
+    text-decoration: none;
+    color: #4e342e;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-menu li a:hover {
+    color: #f2c94c; /* cor de mel ao passar o mouse */
+}
+
+.desenvolvimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.desenvolvimento .meditacao {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.Contato {
+    display: inline-block;
+    background: #f2c94c;
+    color: #4e342e;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.Contato:hover {
+    background: #ffb300;
+    color: white;
+    transform: scale(1.05);
+}
+
+.desenvolvimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.Contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2c94c; /* cor de mel */
+    color: #4e342e;       /* texto marrom escuro */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    gap: 10px; /* espaço entre texto e ícone */
+}
+
+.Contato:hover {
+    background: #ffb300;
+    color: white;
+    transform: scale(1.05);
+}
+
+.imgContato {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
 }

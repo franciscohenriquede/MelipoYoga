@@ -3,8 +3,20 @@
     max-width: 100%; /* Garante que a imagem se ajuste ao tamanho da tela */
     height: auto; 
     background-size: contain; 
+      
     }
+.Mandala {
+  display: flex;
+  justify-content: center;   /* Centraliza na horizontal */
+  align-items: center;       /* Centraliza na vertical */
+  height: 100vh;    
+           /* Ocupa toda a altura da tela */    /* Opcional: cor de fundo */
+}
 
+.logo {
+  width: 600px !important;   /* força o tamanho fixo */
+  height: auto !important;   /* mantém a proporção */
+}
 
 
     @media (max-width: 500px) {

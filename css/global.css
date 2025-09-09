@@ -1,7 +1,9 @@
-
-body{
-    background: rgb(27, 38, 25);
-    max-width: 100%; 
-    position: relative;
-}
- 
+body {
+    /* Gradiente suave lembrando mel e natureza */
+        background: linear-gradient(135deg, #fff3cf, #ffe08c, #fff3cf);
+    /* Para textura sutil de colmeia (opcional) */
+    /* background-image: url('imagens/textura-colmeia.png'); */
+    /* background-repeat: repeat; */
+    /* background-size: cover; */
+    
+}  

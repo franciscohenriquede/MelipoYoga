@@ -1,57 +1,59 @@
 .carrossel {
+    top: 40px;
     position: relative;
-    margin: 20px auto;
-    overflow: hidden; /* mantém os slides dentro do container */
-    border: 1px solid #cc1414d5;
-    border-radius: 10px;
-    background: rgb(206, 125, 26);
+    margin: 50px auto;
+    overflow: hidden;
+    border: 2px solid #f2c94c; /* cor de mel */
+    border-radius: 15px;
+    background: linear-gradient(180deg, #fff8e1, #ffe082); /* tons suaves de mel */
     width: 380px;
-    height: 800px; /* altura fixa */
-    padding: 10px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    height: 690px;
+    font-family: 'Georgia', serif; /* fonte elegante e relaxante */
+    color: #4e342e; /* marrom escuro para texto */
 }
-
 .carrossel-inner {
     display: flex;
-    width: 300%; /* 3 slides */
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1.0s ease-in-out;
+    width: 300%;
+    /* Ajusta conforme o número de slides */
 }
 
 .slide {
-    flex: 0 0 100%; /* ocupa 100% da largura do carrossel */
-    display: flex;
-    flex-direction: column; /* garante que elementos internos fiquem em coluna */
-    justify-content: center; /* centraliza verticalmente */
-    align-items: center;     /* centraliza horizontalmente */
+    flex: 1;
+    min-width: 10%;
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 22px; /* mais legível */
     padding: 20px;
     box-sizing: border-box;
-    height: 800px;
-    overflow-y: auto; /* scroll se o texto for maior que o slide */
+    width: 400px;
+    font-size: 30px;
+    word-break: break-word;
+
+
 }
-.slide p {
-    margin: 0;
-    width: 100%;            /* ocupa toda largura do slide */
-    max-width: 100%;        /* não ultrapassa o slide */
-    white-space: normal;    /* permite quebra de linha */
-    overflow-wrap: break-word; 
-    word-wrap: break-word;  
-    line-height: 1.5;
+
+.textoTres {
+    left: 40px;
+    position: relative;
 }
+
+.textoDois {
+    left: 20px;
+    position: relative;
+}
+
 button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-10%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 50%;
-    z-index: 2;
 }
 
 button:hover {
@@ -64,4 +66,15 @@ button:hover {
 
 .next {
     right: 10px;
+}
+.slide img.foto {
+    margin: 15px auto 0 auto; /* topo 15px, auto nas laterais centraliza */
+    border-radius: 50%;
+    border: 2px solid #f2c94c;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100px;  /* garante tamanho fixo */
+    height: 100px; /* garante tamanho fixo */
+    object-fit: cover; /* mantém proporção */
+    display: block; /* garante centralização */
+    left: 100px;
 }
