@@ -82,5 +82,130 @@
       margin: 20px 0;
       }
       
-     
+     /* ================== Ajustes para telas menores (até 768px) ================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden; /* evita rolagem lateral */
+  }
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .header .logo {
+    width: 180px;
+    height: auto;
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+
+  .header-menu li a {
+    font-size: 16px;
+  }
+
+  /* Introdução e textos */
+  .introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .introducao h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .introducao p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  /* Carrossel */
+  .carrossel {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .carrossel .slide p {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .carrossel .foto {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Vídeos */
+  .video-container,
+  .video-containerSegundo {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-container video,
+  .video-containerSegundo video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Botões */
+  button,
+  .btn {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  /* Overlay meditação */
+  .meditacao-content {
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .meditacao-content h1 {
+    font-size: 20px;
+  }
+
+  .meditacao-content p {
+    font-size: 15px;
+  }
+}
+
+/* ================== Ajustes extras para telas bem pequenas (até 500px) ================== */
+@media (max-width: 500px) {
+  .header .logo {
+    width: 140px;
+  }
+
+  .introducao h1 {
+    font-size: 20px;
+  }
+
+  .introducao p {
+    font-size: 14px;
+  }
+
+  button,
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
       

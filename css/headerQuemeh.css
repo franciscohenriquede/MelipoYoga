@@ -1,0 +1,38 @@
+.header{
+    max-width: 1200px;
+        padding: 40px 20px;
+    display: flex;
+    margin: 0  auto;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    .header-menu{
+    
+        display: flex;
+        gap: 10px;
+        list-style-type: none;
+        justify-content: center;
+       
+     
+    }
+    
+ img.logo {
+    border-radius: 50%;       /* deixa circular */
+    width: 300px;             
+    height: 300px;            
+    object-fit: cover;        /* preenche o círculo sem distorcer */
+    border: 3px solid transparent; /* borda transparente */
+ 
+
+  }
+    .header-menu a {
+       font-size: 1.125rem;
+       line-height: 1.3;
+       padding: 10px 90px;
+    text-decoration: none;
+    color: cornsilk;
+    background: rgb(206, 125, 26);
+    display: block;
+    border-radius: 12px;
+    }
