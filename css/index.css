@@ -19,15 +19,28 @@
 }
 
 
-    @media (max-width: 500px) {
-      
-      
-        .Mandala img{/* Garante que a imagem se ajuste ao tamanho da tela */
-            background-size: contain; 
-            position: relative;
-            top: 390px;
-            right: 180px;
-            max-width: 300%;
-       
-    }
-    }
+/* Mobile: fixa no topo sem ocupar espaço visual extra */
+@media (max-width: 500px) {
+  .Mandala {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;          /* altura do conteúdo */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    background: transparent;
+    z-index: 9999;
+  }
+
+  .logo {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Remova qualquer margin-top fixa que você tenha tentado antes */
+  main + * { margin-top: 0 !important; }
+}
